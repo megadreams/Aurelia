@@ -2,7 +2,7 @@
 
 ## 各種リンク
 
-- (利用ツールの理解促進)[welcome/tools.md]
+- [利用ツールの理解促進](welcome/tools.md)
 
 
 # Aurelia の実行
