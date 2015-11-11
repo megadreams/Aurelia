@@ -82,9 +82,11 @@
       "aurelia-templating-resources": "github:aurelia/templating-resources@^0.17.0",
       "aurelia-templating-router": "github:aurelia/templating-router@^0.18.0",
       "bootstrap": "github:twbs/bootstrap@^3.3.4",
+      "components/jquery": "github:components/jquery@^2.1.4",
       "core-js": "npm:core-js@^1.2.6",
       "fetch": "github:github/fetch@^0.10.1",
       "font-awesome": "npm:font-awesome@^4.3.0",
+      "lodash": "npm:lodash@^3.10.1",
       "text": "github:systemjs/plugin-text@^0.0.2"
     },
     "devDependencies": {

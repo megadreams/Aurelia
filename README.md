@@ -1,4 +1,12 @@
+# Aurelia 触ってみようプロジェクト
+
+## 各種リンク
+
+- (利用ツールの理解促進)[welcome/tools.md]
+
+
 # Aurelia の実行
+
 
 ## このプロジェクトを落としてきたら
 
@@ -58,7 +66,8 @@ Githubのsettingからgist, repo, public_repo, userへのアクセス権がつ�
 export HOMEBREW_GITHUB_API_TOKEN="さっきゲットしたtoken文字列"
 ```
 
--- 参考
+## 参考
+- [Aurelia チュートリアル](https://github.com/aurelia/documentation/blob/master/Japanese/get-started.md)
 - [Aurelia.jsという新しいJavaScriptフレームワーク](http://albatrosary.hateblo.jp/entry/2015/03/03/170143)
 - [Aureliaのsample環境構築](http://qiita.com/nakanowax/items/416be6ba4dee6a2fbc74)
 - [homebrew にて GitHubの API rate limit にかかって怒られた場合の対処方法](http://tanacasino.hatenablog.com/entry/2014/11/03/205508)
