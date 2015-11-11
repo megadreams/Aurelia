@@ -6,6 +6,7 @@
 npm install -g gulp
 npm install -g jspm
 jspm endpoint config github
+npm install -g yo generator-aurelia
 ```
 
 ## サンプル・アプリケーション実行
