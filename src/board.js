@@ -98,6 +98,12 @@ export class Board {
     this.boardDetail = this.config[boardId];
   };
 
+  // click.delegateでViewとViewModelのひも付けを行う
+  // - clic.delegate="createBoard()"
+  createBoard() {
+    alert('新規作成');
+  };
+
   // renderのタイミングっていつなのだろう？
 
   /*
