@@ -1,0 +1,27 @@
+<template>
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <div>
+      <div class="col-md-2">
+        <h3>掲示板一覧</h3>
+        <ul>
+          <li repeat.for="borad of boradList">
+            <a href.bind="borad.href">${borad.title}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10" style="padding: 0">
+
+        <!-- boardDetailが空の時は違うデータを表示すると書くにはどうするのかな-->
+        <h3>${boardDetail.title}</h3>
+        <p>${boardDetail.description}</p>
+        <ul>
+          <li repeat.for="comment of boardDetail.comments">
+            ${comment.body}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</template>
+
