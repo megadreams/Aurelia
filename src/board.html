@@ -1,12 +1,23 @@
 <template>
-  <section class="au-animate">
-    <h2>${heading}</h2>
+<section class="au-animate">
+    <!-- 言語切替 -->
     <div>
-      <button click.delegate="createBoard()">新規作成</button>
+      <h3 t="changeLocale"></h3>
+      <div>
+        <button click.delegate="setLocale('ja')" t="localeJapan"></button>
+        <button click.delegate="setLocale('en')" t="localeEnglish"></button>
+        <button click.delegate="setLocale('cn')" t="localeChinese"></button>
+      </div>
+    </div>
+
+    <!-- t="key"とすることで多言語対応ファイルから呼び出す -->
+    <h2 t="boardHeadTitle"></h2>
+    <div>
+      <button click.delegate="createBoard()" t="boardAddNewButton"></button>
     </div>
     <div>
       <div class="col-md-2">
-        <h3>掲示板一覧</h3>
+        <h3 t="boardNavTitel"></h3>
         <ul>
           <li repeat.for="borad of boradList">
             <a href.bind="borad.href">${borad.title}</a>
@@ -26,5 +37,11 @@
       </div>
     </div>
   </section>
+  <footer>
+    <p>
+      ※ 掲示板リスト及び詳細は、入力データを利用しているので多言語化対応していません
+    </p>
+  </footer>
+
 </template>
 

@@ -1,0 +1,11 @@
+{
+  "changeLocale": "言語切替",
+  "localeJapan": "日本語",
+  "localeEnglish": "英語",
+  "localeChinese": "中国語",
+
+
+  "boardHeadTitle": "掲示板",
+  "boardAddNewButton": "新規追加",
+  "boardNavTitel": "掲示板一覧"
+}
