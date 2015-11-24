@@ -1,14 +1,6 @@
-/*
-import {inject} from 'aurelia-framework';
-import {HttpClient} from 'aurelia-fetch-client';
-import 'fetch';
-@inject(HttpClient)
-*/
+import {Base} from 'base';
 
-// 多言語対応
-import {I18N} from 'aurelia-i18n';
-
-export class Board {
+export class Board extends Base{
 
 //  heading = '掲示板';
 
@@ -24,40 +16,15 @@ export class Board {
   */
   boardDetail: {};
 
-  // 多言語対応
-  static inject = [I18N];
-
-
-  // TODO: 本来はBaseViewなどを継承し、親Viewで言語設定を行うのが良いと感じている
-  local: 'en';
-  /**
-   * 言語切り替え用のメソッド
-   *
-   */
-  setLocale(local) {
-    this.local = local || 'ja';
-
-    // 言語設定を行う
-    // - ja: 日本語
-    // - en: 英語
-    this.i18n
-        .setLocale(this.local)
-        .then( () => {
-    });
-    // 下記のような形でキーを元に翻訳データを取得する
-    //console.log(this.i18n.tr('boardHeadTitle'));
-  };
-
   /**
    * ViewModelが生成されるときに呼ばれるメソッド
    *  引数に多言語対応用のi18nが呼ばれる
    */
   constructor(i18n) {
-    // 多言語対応設定
-    this.i18n = i18n;
-    this.setLocale(this.local);
 
-    console.log('constructor');
+    super(i18n);
+
+
     // TODO: ここはhttpでデータを取得したい
     this.boradList = [
       {
@@ -134,8 +101,6 @@ export class Board {
    *     - どのタイミングでrenderが走るのかは調べる必要がある
    */
   activate(params) {
-    console.log('activate');
-    console.log(params);
     var boardId = (params.id - 1);
     // とりあえず表示を切り替えるために設定してみる
     this.boardDetail = this.config[boardId];
@@ -149,6 +114,13 @@ export class Board {
   */
   createBoard() {
     alert(this.i18n.tr('boardAddNewButton'));
+  };
+
+  /**
+   * 言語切替メソッド
+   */
+  setLocale(local) {
+    super.setLocale(local);
   };
 
   // TODO: renderのタイミングっていつなのだろう？
